@@ -43,19 +43,23 @@
       
 
       <h1 id="cdnmeigostorexyz">cdnmeigostore.xyz</h1>
-<p>cdn.meigostore.xyz</p>
+<p>cdn.meigostore.xyz</p> <br>
+      <p>В консоль произведён вывод доступной памяти CDN.</p>
       <script>
-             var _lsTotal = 0,
-    _xLen, _x;
-for (_x in localStorage) {
-    if (!localStorage.hasOwnProperty(_x)) {
-        continue;
-    }
-    _xLen = ((localStorage[_x].length + _x.length) * 2);
-    _lsTotal += _xLen;
-    console.log(_x.substr(0, 50) + " = " + (_xLen / 1024).toFixed(2) + " KB")
-};
-console.log("Total = " + (_lsTotal / 1024).toFixed(2) + " K
+             const { execSync } = require('child_process');
+const { readFileSync, unlinkSync } = require('fs')
+
+var space;
+
+execSync('df -h > df.txt');
+
+space = readFileSync('df.txt', (data, err) => {
+  if (err) {
+    throw err
+  }
+}).toString().match(/[0-9]+\.[0-9]+?../)[0]
+
+console.log(space)
             
       </script> 
             
