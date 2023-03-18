@@ -33,7 +33,7 @@
 
 
 <!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+link rel="shortcut icon" type="image/png" href="/images/m.png"
 
 <!-- end custom head snippets -->
 
@@ -45,23 +45,15 @@
       <h1 id="cdnmeigostorexyz">cdnmeigostore.xyz</h1>
 <p>cdn.meigostore.xyz</p> <br>
       <p>В консоль произведён вывод доступной памяти CDN.</p>
+      <!-- Сгенерировано автоматически при помощи PHP -->
       <script>
-             const { execSync } = require('child_process');
-const { readFileSync, unlinkSync } = require('fs')
 
-var space;
-
-execSync('df -h > df.txt');
-
-space = readFileSync('df.txt', (data, err) => {
-  if (err) {
-    throw err
-  }
-}).toString().match(/[0-9]+\.[0-9]+?../)[0]
-
-console.log(space)
+console.log("Текущее дисковое пространство: 19 GB / 498 GB")
+        <!-- Определен IP: 185.199.110.153 -->
+        console.log("Локация CDN: США")
             
       </script> 
+      <!-- Сгенерировано автоматически при помощи PHP -->
             
             
 
